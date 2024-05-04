@@ -1,3 +1,10 @@
+<?html
+    session_start();
+    if (!isset($_SESSION['email'])) {
+    header("Location: ../mainpage.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,14 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
 
-.table {
-    color: #56d1ff;
-}
 
-.table-dark {
-    color: #ffde1e;
-    border-color: #1a1a1a;
-}
 .row {
     color: #56d1ff;
 }
@@ -42,23 +42,6 @@
 a:hover span {
   text-decoration: underline;
 }
-.ms-3 {
-    margin-right: 1rem !important;
-}
-i.fa.fa-chart-pie.fa-3x.text-primary {
-    margin-left: 1rem !important;
-}
-
-.btn-primary {
-            color: #fff;
-            border: none; 
-            padding: 6px 10px; 
-            border-radius: 5px;
-            transition: box-shadow 0.3s;
-        }
-        .btn-primary:hover {
-            box-shadow: 0 0 20px #56d1ff; 
-        }
    </style>
 </head>
 
@@ -86,30 +69,35 @@ i.fa.fa-chart-pie.fa-3x.text-primary {
                     </div>
                     <div class="ms-3">
                     <h6 class="mb-0" style="font-weight: bold;">Megapint2023</h6>
-                        <span style="color: #56d1ff;" >Jr. Developer</span>
+                    <span style="color: #56d1ff;" >Jr. Developer</span>
                     </div>
                 </div>
-               <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>(in development):</a>
-                    <a href="page1.html" class="nav-item nav-link active"><i class="fa fa-file-alt me-2"></i>(in development):</a>
-                    <a href="page2.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>(in development):</a>
-                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>(in development):</a>
-                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>(in development):</a>
-                    </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>INDEX (in development):</a>
+                    <a href="page1.html" class="nav-item nav-link active"><i class="fa fa-file-alt me-2"></i>PAGE1 (in development):</a>
+                    <a href="page2.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>PAGE2 (in development):</a>
+                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>PAGE3 (in development):</a>   
+                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE4 (in development):</a>
                 </div>
             </nav>
         </div>
-       
-      
-      <div class="content">
-      
-      <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
-                <a href="" class="sidebar-toggler flex-shrink-0">
+        <!-- Sidebar End -->
+
+
+ 
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-
+          
           <!-- TÄMÄ KLOKKA ja PVM-->
-                <div class="navbar-nav align-items-center me-auto">
+          <div class="navbar-nav align-items-center me-auto">
                   <div class="d-flex align-items-start">
                     <h5 class="mb-0" style="font-weight: bold; color: #56d1ff;" id="date"></h5>
                     <h4 class="text"style="font-weight: bold; color: #ffed84;"></h4>
@@ -134,9 +122,10 @@ i.fa.fa-chart-pie.fa-3x.text-primary {
                    setInterval(updateDateTime, 1000);
                      </script>
 
+
 <!-- LOCAL WEATHER start -->
 
-                              <div class="col-sm-12 col-md-6 col-xl-4">
+                             <div class="col-sm-12 col-md-6 col-xl-4">
                                 <div class="row g-4">
                                     <div class="h-100 bg-secondary rounded p-4">
                                         <div class="d-flex align-items-end">
@@ -164,11 +153,10 @@ i.fa.fa-chart-pie.fa-3x.text-primary {
                               `;
                             })
                             .catch(error => console.error('Error fetching weather data:', error));
-                    </script> 
+                    </script>
 
 <!-- LOCAL WEATHER END -->
-
-              <!-- USER OIKEALLA MUUTETTU BUTTON9 JOTTA TOIMII JS-->
+              <!-- USER OIKEALLA-->
                <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/new.jpg" alt="" style="width: 40px; height: 40px;">
@@ -179,225 +167,201 @@ i.fa.fa-chart-pie.fa-3x.text-primary {
                         </div>
                </div>
          </nav>
-  
+
+           <!-- 4X CALCULATORS -->
+           <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+       <!-- 1 YEAR SALES CALCULATOR -->  
+        <!-- JS CALCULATES YEARLY SALES AND PLACES VALUE -->
+                <script>
+               $(document).ready(function() {
+                   function fetchDailySales() {
+               
+                       var today = new Date().toISOString().slice(0, 10);
+                       
+                       $.ajax({
+                           url: 'admin_yearly_sales.html',
+                           method: 'POST',
+                           data: { date: today },
+                           success: function(response) {
+                               $('#yearly_sales').text(response);
+                           },
+                           error: function(xhr, status, error) {
+                               console.error(error);
+                           }
+                       });
+                   }
+                   fetchDailySales();
+               });
+               </script>                
+                    <div class="col-sm-6 col-xl-3">
+                        <div id="CurrentTime" class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa fa-chart-pie fa-3x text-primary aligh-self-end"></i>
+                            <div class="ms-3">
+                                <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES: </h5>
+                                <h6 class="mb-0">THIS YEAR:</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="yearly_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            </div>
+                        </div>
+                    </div>
+    <!-- 1 MONTH SALES CALCULATOR --> 
+    <!-- JS CALCULATES MONTHLY SALES AND PLACES VALUE -->
+               <script>
+               $(document).ready(function() {
+                   function fetchDailySales() {
+               
+                       var today = new Date().toISOString().slice(0, 10);
+                       
+                       $.ajax({
+                           url: 'admin_monthly_sales.html',
+                           method: 'POST',
+                           data: { date: today },
+                           success: function(response) {
+                               $('#monthly_sales').text(response);
+                           },
+                           error: function(xhr, status, error) {
+                               console.error(error);
+                           }
+                       });
+                   }
+                   fetchDailySales();
+               });
+               </script>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                            <div class="ms-3">
+                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES:</h5>
+                                <h6 class="mb-0">THIS MONTH:</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="monthly_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            </div>
+                        </div>
+                    </div>
+     <!-- JS CALCULATES WEEKLY SALES AND PLACES VALUE -->
+     <!-- 1 WEEK SALES CALCULATOR --> 
+             <script>
+               $(document).ready(function() {
+                   function fetchDailySales() {
+               
+                       var today = new Date().toISOString().slice(0, 10);
+                       
+                       $.ajax({
+                           url: 'admin_weekly_sales.html',
+                           method: 'POST',
+                           data: { date: today },
+                           success: function(response) {
+                               $('#weekly_sales').text(response);
+                           },
+                           error: function(xhr, status, error) {
+                               console.error(error);
+                           }
+                       });
+                   }
+                   fetchDailySales();
+               });
+               </script>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                            <div class="ms-3">
+                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES:</h5>
+                                <h6 class="mb-0">THIS WEEK:</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="weekly_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            </div>
+                        </div>
+                    </div>
+     <!-- 1 DAY SALES CALCULATOR --> 
+     <!-- JS CALCULATES DAILY SALES AND PLACES VALUE FOR TODAY -->
+              <script>
+               $(document).ready(function() {
+                   function fetchDailySales() {
+               
+                       var today = new Date().toISOString().slice(0, 10);
+                       
+                       $.ajax({
+                           url: 'admin_daily_sales.html',
+                           method: 'POST',
+                           data: { date: today },
+                           success: function(response) {
+                               $('#daily_sales').text(response);
+                           },
+                           error: function(xhr, status, error) {
+                               console.error(error);
+                           }
+                       });
+                   }
+                   fetchDailySales();
+               });
+               </script>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-area fa-3x text-primary"></i>
+                            <div class="ms-3">
+                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES:</h5>
+                                <h6 class="mb-0">TODAY:</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="daily_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            </div>
+                        </div>
+                    </div>
 
 
 
-     <!-- WIDGET -->
+     <!-- STATISTIC CHARTS -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-
-                                <!-- DASHBOARD RIVIN KESKIMMÄINEN BOXI, KALENTERI -->
-                                <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h5 class="mb-0">SCEDULE & EVENTS:</h5>
-                            </div>
-                            <div id="calender" style="color: #56d1ff;"></div>
-                        </div>
-                    </div>
-
-
-                     <!-- jQUERY JS "click on link" -->
-                    <script>
-                    $(document).ready(function(){
-                        $("#showAllLink").click(function(){
-                            alert("THIS FEATURE IS FOR THE FUTURE -INSIDE COMPANY- APP DEVELOPMENT.");
-                        });
-                    });
-                    </script>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h5 class="mb-0">BOX2:</h5>
-                                <a href="#" id="showAllLink">Show All</a>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user1.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">...</h6>
-                                        <small>...</small>
-                                    </div>
-                                    <span>...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user1.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">...</h6>
-                                        <small>...</small>
-                                    </div>
-                                    <span>....</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user1.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">...</h6>
-                                        <small>...</small>
-                                    </div>
-                                    <span>...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user1.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-0">...</h5>
-                                        <small>...</small>
-                                    </div>
-                                    <span>...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     
-
-
                     
-                <!-- TODO LIST-->  
-                <script>
-    $(document).ready(function(){
-        $('.update-button').click(function(){
-            alert('NOTES UPDATED!');
-        });
-    });
-</script>
-            
-
-            <div class="col-sm-12 col-md-6 col-xl-4">
-             <div class="h-100 bg-secondary rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-4">
-                      <h5 class="mb-0">BOX3</h5>
-                </div>
-
-                <form action="admin_add_task.html" method="post">
-                 <div class="d-flex mb-2">
-                   <input type="text" class="form-control bg-dark border-0" name="task" placeholder="Add task...">
-                   <button type="submit" class="btn btn-primary ms-2 update-button">+</button>
-                 </div>
-              </form>
-              
-
-                 <div id="taskList" class="todo-list">
-        </div>
-    </div>
-</div>
-
-
-
-    <!-- TÄSTÄ ALKAA LOMAKKEILLE DIVI -->
-     <!--  PRINT LABLE  -->
-     <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4"></h6>
-                           <div class="owl-carousel testimonial-carousel">
-                                <div class="testimonial-item text-center">
-                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/user.jpg" style="width: 100px; height: 100px;">
-                                    <h5 class="mb-1">...</h5>
-                                    <p>...</p>
-                                    <p class="mb-0">...</p>
-                                </div>
-                                <div class="testimonial-item text-center">
-                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/user1.jpg" style="width: 100px; height: 100px;">
-                                    <h5 class="mb-1">...</h5>
-                                    <p>...</p>
-                                    <p class="mb-0">404</p>
-                                </div> 
-                            </div> 
-                        </div>
-                    </div>
-                      
-
-    
-
-
-       <!-- YHTEYDENOTTO LOMAKE --> 
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h5 class="mb-4">CONTACT CUSTOMER:</h5>
-
-                            <form action="submit.html" method="post">
-                                <div class="mb-3">
-                                    <label for="customerEmail" class="form-label">CUSTOMER EMAIL:</label>
-                                    <input type="email" class="form-control" id="customerEmail" name="customerEmail" aria-describedby="emailHelp" required>
-                                </div>
-
-                                <div class="mb-3">
-                                <label for="message" class="form-label">MESSAGE:</label>
-                                <textarea class="form-control" id="message" name="message" placeholder="(Message)" style="height: 150px;" required></textarea>
-                             </div>
-                                <button type="submit" class="btn btn-primary" id="disabled">SEND</button>
-                            </form>
+                            <h6 class="mb-4">YEARLY SALES & REVENUE:</h6>
+                            <canvas id="salse-revenue"></canvas>
                         </div>
-                    </div>    
-             <!-- JS FOR BUTTON ALERT  --> 
-            <script>
-              document.getElementById("disabled").addEventListener("click", function() {
-                  alert("THIS FEATURE IS TEMPORARELY DISABLED -> DEFAULT/ADMIN EMAIL ADDRESS REQUIRED.");
-              });
-            </script>
-
-
-
-<!-- CUSTOMER MESSAGES TABLE -->
-                   <div class="container-fluid pt-4 px-4">
-                   <div class="row g-4">
-                   <div class="col-12">
-                            <div class="bg-secondary rounded h-100 p-4">
-                             <h5 class="mb-4">CUSTOMER MESSAGES:</h5>
-                            <div class="table-responsive">
-                                <table class="table table-dark" style="font-weight: bold; color: #56d1ff;">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">ID:</th>
-                                            <th scope="col">NAME:</th>
-                                            <th scope="col">EMAIL:</th>
-                                            <th scope="col">MESSAGE:</th>
-                                            <th scope="col">ADMIN:</th>
-                                        </tr>
-                                    </thead>
-
-                                <tbody style="font-weight: bold; color: #ffed84;">
-
-                            
-                                </tbody>
-                                </table>
-                            </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">SALES:</h6>
+                            <canvas id="worldwide-sales"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">TOP DESTINATIONCS:</h6>
+                            <canvas id="bar-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">QUANTITIES:</h6>
+                            <canvas id="line-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">BIGGEST CUSTOMERS:</h6>
+                            <canvas id="doughnut-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">MOST POPULAR PRODUCTS:</h6>
+                            <canvas id="pie-chart"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-                        
-                
-        
-
-
-            <!-- Sales Chart Start -->
-        
+  <!-- CHARTS END -->
+   <!-- GROUP END -->
                 </div>
             </div>
-            <!-- Widgets End -->
-
-
-            <!-- Footer Start -->
+    
+            <!-- FOOTER -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start" style="color: #56d1ff; font-weight: bold;">
-                        
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
                             &copy; <a href="#">Megapint2023</a>, All Rights Reserved. 
                         </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end" style="color: #56d1ff; font-weight: bold;">
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                             <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
@@ -411,7 +375,7 @@ i.fa.fa-chart-pie.fa-3x.text-primary {
 
 
         <!-- Back to Top -->
-        <button href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></button>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
