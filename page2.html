@@ -76,12 +76,13 @@ a:hover span {
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PROGRESS:</a>
-                    <a href="page1.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>PAGE1:</a>
-                    <a href="page2.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>PAGE2:</a>
-                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>PAGE3:</a> 
-                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE4:</a>
-                    <a href="page5.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE5:</a>
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PROGRESS</a>
+                    <a href="page1.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>JS</a>
+                    <a href="page2.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>PHP</a>
+                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>DATABASE</a> 
+                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>C</a>
+                    <a href="page5.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>CYBER</a>
+                    <a href="page6.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE5</a>
                 </div>
             </nav>
         </div>
@@ -177,75 +178,10 @@ a:hover span {
                 
 
 
-        <!-- JS FOR SEARCH FEATURE --> 
-                  <script>
-                    $(document).ready(function(){
-                        $('#searchInput').on('input', function(){
-                            var searchText = $(this).val().toLowerCase();
-                            $('#usersTable tbody tr').each(function(){
-                                var found = false;
-                                $(this).find('td').each(function(){
-                                    if($(this).text().toLowerCase().includes(searchText)){
-                                        found = true;
-                                        return false;
-                                    }
-                                });
-                                if(found){
-                                    $(this).show();
-                                } else {
-                                    $(this).hide();
-                                }
-                            });
-                        });
-                    });
-                </script>
-                    
-                    <!-- SEARCH FEATURE -->            
-                     <div class="container-fluid pt-4 px-4">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="col-sm-12 col-md-6 col-xl-4">
-                                    <div class="h-100 bg-secondary rounded p-4">
-                                        <div class="d-flex align-items-center justify-content-between mb-2">
-                                            <h5 class="mb-0">SEARCH:</h5>
-                                        </div>
-                                        <input type="text" id="searchInput" class="form-control" placeholder="...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            <!-- TABLE FOR REGISTERED USERS -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="bg-secondary rounded h-100 p-5">
-                            <h5 class="mb-4">table:</h5>
-                            <div id="usersTable" class="table-responsive">
-                            <table class="table table-dark">
-                                <thead>
-                                    <tr style="font-weight: bold; color: #56d1ff;">
-                                        <th scope="col">ROW:</th>
-                                        <th scope="col">ROW:</th>
-                                        <th scope="col">ROW:</th>
-                                        <th scope="col">ROW:</th>
-                                        <th scope="col">ROW:</th>
-                                    </tr>
-                                </thead>
-                                <tbody style="font-weight: bold; color: #ffed84;">
-                
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-            <!-- TABLE FOR REGISTERED USERS END -->
 
 
-            <!-- Footer Start -->
+
+            <!-- FOOTER -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
