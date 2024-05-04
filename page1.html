@@ -47,20 +47,19 @@ a:hover span {
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
-        <!-- Spinner Start -->
+        <!-- SPINNER -->
         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <!-- Spinner End -->
+        
 
-
-        <!-- Sidebar Start -->
+        <!-- SIDEBAR -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="generalpage.html" class="navbar-brand mx-4 mb-3">
-                    <h4 class="text-primary"><i class="fa fa-user-edit me-2"></i>PROGRAMMER</h4>
+                    <h4 class="text-primary"><i class="fa fa-user-edit me-2"></i>(in development)</h4>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -68,23 +67,22 @@ a:hover span {
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                    <h6 class="mb-0" style="font-weight: bold;">Megapint2023</h6>
+                    <h6 class="mb-0" style="font-weight: bold;">Aleksi Ruotsalo</h6>
                     <span style="color: #56d1ff;" >Jr. Developer</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>INDEX (in development):</a>
-                    <a href="page1.html" class="nav-item nav-link active"><i class="fa fa-file-alt me-2"></i>PAGE1 (in development):</a>
-                    <a href="page2.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>PAGE2 (in development):</a>
-                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>PAGE3 (in development):</a>   
-                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE4 (in development):</a>
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PROGRESS:</a>
+                    <a href="page1.html" class="nav-item nav-link active"><i class="fa fa-file-alt me-2"></i>PAGE1:</a>
+                    <a href="page2.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>PAGE2:</a>
+                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>PAGE3:</a>   
+                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE4:</a>
                 </div>
             </nav>
         </div>
-        <!-- Sidebar End -->
+    
 
 
- 
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
@@ -123,7 +121,7 @@ a:hover span {
                      </script>
 
 
-<!-- LOCAL WEATHER start -->
+             <!-- LOCAL WEATHER  -->
 
                              <div class="col-sm-12 col-md-6 col-xl-4">
                                 <div class="row g-4">
@@ -155,151 +153,61 @@ a:hover span {
                             .catch(error => console.error('Error fetching weather data:', error));
                     </script>
 
-<!-- LOCAL WEATHER END -->
               <!-- USER OIKEALLA-->
                <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/new.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex" style="color: RED; font-weight: bold;">ONLINE</span>
+                            <span class="d-none d-lg-inline-flex" style="color: RED; font-weight: bold;">"weekday"</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="logout.html" class="dropdown-item">Log Out</a>
-                        </div>
+
                </div>
          </nav>
 
            <!-- 4X CALCULATORS -->
            <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-       <!-- 1 YEAR SALES CALCULATOR -->  
-        <!-- JS CALCULATES YEARLY SALES AND PLACES VALUE -->
-                <script>
-               $(document).ready(function() {
-                   function fetchDailySales() {
-               
-                       var today = new Date().toISOString().slice(0, 10);
-                       
-                       $.ajax({
-                           url: 'admin_yearly_sales.html',
-                           method: 'POST',
-                           data: { date: today },
-                           success: function(response) {
-                               $('#yearly_sales').text(response);
-                           },
-                           error: function(xhr, status, error) {
-                               console.error(error);
-                           }
-                       });
-                   }
-                   fetchDailySales();
-               });
-               </script>                
+                  <!-- -->
+
                     <div class="col-sm-6 col-xl-3">
                         <div id="CurrentTime" class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                         <i class="fa fa-chart-pie fa-3x text-primary aligh-self-end"></i>
                             <div class="ms-3">
-                                <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES: </h5>
-                                <h6 class="mb-0">THIS YEAR:</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="yearly_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                                <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
+                                <h6 class="mb-0">...</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="yearly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
                             </div>
                         </div>
                     </div>
-    <!-- 1 MONTH SALES CALCULATOR --> 
-    <!-- JS CALCULATES MONTHLY SALES AND PLACES VALUE -->
-               <script>
-               $(document).ready(function() {
-                   function fetchDailySales() {
-               
-                       var today = new Date().toISOString().slice(0, 10);
-                       
-                       $.ajax({
-                           url: 'admin_monthly_sales.html',
-                           method: 'POST',
-                           data: { date: today },
-                           success: function(response) {
-                               $('#monthly_sales').text(response);
-                           },
-                           error: function(xhr, status, error) {
-                               console.error(error);
-                           }
-                       });
-                   }
-                   fetchDailySales();
-               });
-               </script>
+                <!-- -->
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
-                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES:</h5>
-                                <h6 class="mb-0">THIS MONTH:</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="monthly_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
+                                <h6 class="mb-0">...</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="monthly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
                             </div>
                         </div>
                     </div>
-     <!-- JS CALCULATES WEEKLY SALES AND PLACES VALUE -->
-     <!-- 1 WEEK SALES CALCULATOR --> 
-             <script>
-               $(document).ready(function() {
-                   function fetchDailySales() {
-               
-                       var today = new Date().toISOString().slice(0, 10);
-                       
-                       $.ajax({
-                           url: 'admin_weekly_sales.html',
-                           method: 'POST',
-                           data: { date: today },
-                           success: function(response) {
-                               $('#weekly_sales').text(response);
-                           },
-                           error: function(xhr, status, error) {
-                               console.error(error);
-                           }
-                       });
-                   }
-                   fetchDailySales();
-               });
-               </script>
+                <!-- -->
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES:</h5>
-                                <h6 class="mb-0">THIS WEEK:</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="weekly_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
+                                <h6 class="mb-0">...</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="weekly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
                             </div>
                         </div>
                     </div>
-     <!-- 1 DAY SALES CALCULATOR --> 
-     <!-- JS CALCULATES DAILY SALES AND PLACES VALUE FOR TODAY -->
-              <script>
-               $(document).ready(function() {
-                   function fetchDailySales() {
-               
-                       var today = new Date().toISOString().slice(0, 10);
-                       
-                       $.ajax({
-                           url: 'admin_daily_sales.html',
-                           method: 'POST',
-                           data: { date: today },
-                           success: function(response) {
-                               $('#daily_sales').text(response);
-                           },
-                           error: function(xhr, status, error) {
-                               console.error(error);
-                           }
-                       });
-                   }
-                   fetchDailySales();
-               });
-               </script>
+                 <!-- -->
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">SALES:</h5>
-                                <h6 class="mb-0">TODAY:</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="daily_sales" style="text-shadow: 0 0 5px #2fbe00;">0€</span></h5>
+                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
+                                <h6 class="mb-0">...</h6>
+                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="daily_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
                             </div>
                         </div>
                     </div>
@@ -313,37 +221,37 @@ a:hover span {
                     
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">YEARLY SALES & REVENUE:</h6>
+                            <h6 class="mb-4">CODE:</h6>
                             <canvas id="salse-revenue"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">SALES:</h6>
+                            <h6 class="mb-4">CODE:</h6>
                             <canvas id="worldwide-sales"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">TOP DESTINATIONCS:</h6>
+                            <h6 class="mb-4">CODE:</h6>
                             <canvas id="bar-chart"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">QUANTITIES:</h6>
+                            <h6 class="mb-4">CODE:</h6>
                             <canvas id="line-chart"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">BIGGEST CUSTOMERS:</h6>
+                            <h6 class="mb-4">CODE:</h6>
                             <canvas id="doughnut-chart"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">MOST POPULAR PRODUCTS:</h6>
+                            <h6 class="mb-4">CODE:</h6>
                             <canvas id="pie-chart"></canvas>
                         </div>
                     </div>

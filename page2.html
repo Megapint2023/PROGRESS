@@ -70,7 +70,7 @@ a:hover span {
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="generalpage.html" class="navbar-brand mx-4 mb-3">
-                    <h4 class="text-primary"><i class="fa fa-user-edit me-2"></i>PROGRAMMER</h4>
+                    <h4 class="text-primary"><i class="fa fa-user-edit me-2"></i>(in development)</h4>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -78,16 +78,16 @@ a:hover span {
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                    <h6 class="mb-0" style="font-weight: bold;">Megapint2023</h6>
+                    <h6 class="mb-0" style="font-weight: bold;">Aleksi Ruotsalo</h6>
                     <span style="color: #56d1ff;" >Jr. Developer</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>INDEX (in development):</a>
-                    <a href="page1.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>PAGE1 (in development):</a>
-                    <a href="page2.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>PAGE2 (in development):</a>
-                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>PAGE3 (in development):</a> 
-                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE4(in development):</a>
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PROGRESS:</a>
+                    <a href="page1.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>PAGE1:</a>
+                    <a href="page2.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>PAGE2:</a>
+                    <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>PAGE3:</a> 
+                    <a href="page4.html" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>PAGE:</a>
                 </div>
             </nav>
         </div>
@@ -169,11 +169,8 @@ a:hover span {
                <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/new.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex" style="color: RED; font-weight: bold;">ONLINE</span>
+                            <span class="d-none d-lg-inline-flex" style="color: RED; font-weight: bold;">"weekday"</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="logout.html" class="dropdown-item">Log Out</a>
-                        </div>
                </div>
          </nav>
 
@@ -187,65 +184,59 @@ a:hover span {
                       <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
 
-                            <h5 class="mb-4">ADD USER MANUALLY:</h5>
+                            <h5 class="mb-4">BOX1</h5>
                             <form action="admin_add_user.html" method="post">
 
                             <div class="row mb-3">
-                                    <label for="name" class="col-sm-2 col-form-label">NAME:</label>
+                                    <label for="name" class="col-sm-2 col-form-label">*</label>
                                     <div class="col-sm-10">
                                     <input type="text" class="form-control" name="name" required>
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="dddress" class="col-sm-2 col-form-label">ADDRESS:</label>
+                                    <label for="dddress" class="col-sm-2 col-form-label">*</label>
                                     <div class="col-sm-10">
                                     <input type="text" class="form-control" name="address" required>
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="phone" class="col-sm-2 col-form-label">PHONE:</label>
+                                    <label for="phone" class="col-sm-2 col-form-label">*</label>
                                     <div class="col-sm-10">
                                     <input type="tel" class="form-control" name="phone" required>
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="emai" class="col-sm-2 col-form-label">EMAIL:</label>
+                                    <label for="emai" class="col-sm-2 col-form-label">*</label>
                                     <div class="col-sm-10">
                                     <input type="email" class="form-control" name="email" required>
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="password" class="col-sm-2 col-form-label">PASSWORD:</label>
+                                    <label for="password" class="col-sm-2 col-form-label">*</label>
                                     <div class="col-sm-10">
                                     <input type="password" class="form-control" name="password" required>
                                     </div>
                                 </div>
 
                                 <fieldset class="row mb-3">
-                                    <legend class="col-form-label col-sm-2 pt-0">USER TYPE:</legend>
+                                    
                                     <div class="col-sm-10">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                                 Register user:
-                                            </label>
+                                            
+                                           
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2" disabled>
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Register Company: (for future development):
-                                            </label>
+                                     
+                                     
                                         </div>
                                     </div>
                                 </fieldset>
                                 
-                                <button type="submit" class="btn btn-primary">ADD USER:</button>
+                                <button type="submit" class="btn btn-primary">...</button>
                             </form>
                         </div>
                     </div>
@@ -253,26 +244,26 @@ a:hover span {
          <!-- YHTEYDENOTTO LOMAKE --> 
                   <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h5 class="mb-4">CONTACT USER:</h5>
+                            <h5 class="mb-4">BOX2</h5>
 
                             <form action="submit.html" method="post">
                                 <div class="mb-3">
-                                    <label for="customerEmail" class="form-label">USER EMAIL:</label>
+                                   
                                     <input type="email" class="form-control" id="customerEmail" name="customerEmail" aria-describedby="emailHelp" required>
                                 </div>
 
                                 <div class="mb-3">
                                 <label for="message" class="form-label">MESSAGE:</label>
-                                <textarea class="form-control" id="message" name="message" placeholder="(Message)" style="height: 150px;" required></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="(...)" style="height: 150px;" required></textarea>
                              </div>
-                                <button type="submit" class="btn btn-primary" id="disabled">SEND</button>
+                                <button type="submit" class="btn btn-primary" id="disabled">B</button>
                             </form>
                         </div>
                     </div>   
      <!-- JS FOR BUTTON "DISABLED" ALERT  -->   
            <script>
               document.getElementById("disabled").addEventListener("click", function() {
-                  alert("THIS FEATURE IS TEMPORARELY DISABLED -> DEFAULT/ADMIN EMAIL ADDRESS REQUIRED.");
+                  alert("NEW FEATURE");
               });
             </script>
 
@@ -306,29 +297,30 @@ a:hover span {
                                 <div class="col-sm-12 col-md-6 col-xl-4">
                                     <div class="h-100 bg-secondary rounded p-4">
                                         <div class="d-flex align-items-center justify-content-between mb-2">
-                                            <h5 class="mb-0">SEARCH FOR USER:</h5>
+                                            <h5 class="mb-0">SEARCH:</h5>
                                         </div>
-                                        <input type="text" id="searchInput" class="form-control" placeholder="Enter search term">
+                                        <input type="text" id="searchInput" class="form-control" placeholder="...">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
             <!-- TABLE FOR REGISTERED USERS -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="bg-secondary rounded h-100 p-5">
-                            <h5 class="mb-4">REGISTERED USERS:</h5>
+                            <h5 class="mb-4">table:</h5>
                             <div id="usersTable" class="table-responsive">
                             <table class="table table-dark">
                                 <thead>
                                     <tr style="font-weight: bold; color: #56d1ff;">
-                                        <th scope="col">NAME:</th>
-                                        <th scope="col">ADDRESS:</th>
-                                        <th scope="col">PHONE:</th>
-                                        <th scope="col">EMAIL:</th>
-                                        <th scope="col">ADMIN:</th>
+                                        <th scope="col">ROW:</th>
+                                        <th scope="col">ROW:</th>
+                                        <th scope="col">ROW:</th>
+                                        <th scope="col">ROW:</th>
+                                        <th scope="col">ROW:</th>
                                     </tr>
                                 </thead>
                                 <tbody style="font-weight: bold; color: #ffed84;">
