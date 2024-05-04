@@ -82,7 +82,7 @@ a:hover span {
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="generalpage.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>ADMIN</h3>
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Megapint2023</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -95,7 +95,7 @@ a:hover span {
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>ORDERS:</a>
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PROGRESS:</a>
                     <a href="page1.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>(in development):</a>
                     <a href="page2.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>(in development):</a>
                     <a href="page3.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>(in development):</a>  
@@ -163,7 +163,7 @@ a:hover span {
                         fetch(apiUrl)
                             .then(response => response.json())
                             .then(data => {
-                                const temperature = data.main.temp;
+                                const temperature = data.main.temp.toFixed(1);
                                 const description = data.weather[0].description;
                                 const weatherInfo = document.getElementById('weather-info');
                                 weatherInfo.innerHTML = `
