@@ -86,7 +86,7 @@ a:hover span {
         </div>
 
         <div class="content">
-            <!-- Navbar -->
+            <!-- NAV -->
             <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
@@ -121,19 +121,18 @@ a:hover span {
                    setInterval(updateDateTime, 1000);
                      </script>
 
-
-                      <!-- LOCAL WEATHER  -->
-
-                             <div class="col-sm-12 col-md-6 col-xl-4">
-                                <div class="row g-4">
-                                    <div class="h-100 bg-secondary rounded p-4">
-                                        <div class="d-flex align-items-end">
-                                            <h6 class="mb-0" style="font-weight: bold; color: #56d1ff;" id="weather-info"></h6>
-                                        </div>
-                                    </div>
+              <!-- LOCAL WEATHER  -->
+                     <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="row g-4">
+                            <div class="h-100 bg-secondary rounded p-4">
+                                <div class="d-flex align-items-end">
+                                    <h6 class="mb-0" style="font-weight: bold; color: #56d1ff;" id="weather-info"></h6>
                                 </div>
                             </div>
-                    
+                        </div>
+                    </div>
+
+                    <!-- WEATHER JS  -->
                     <script>
                         const apiKey = '910770641e046b37ff65859496b079cf';
                         const city = 'Helsinki';
@@ -153,278 +152,41 @@ a:hover span {
                             })
                             .catch(error => console.error('Error fetching weather data:', error));
                     </script>
-                <!--  -->
+                <!-- WEATHER END  -->
 
               <!-- USER OIKEALLA-->
-               <div class="nav-item dropdown">
+                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/new.jpg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex" style="color: RED; font-weight: bold;">"weekday"</span>
                         </a>
-               </div>
-         </nav>
+                     </div>
+                 </nav>
 
 
-                <!-- 4X CALCULATORS -->
+                <!--  -->
                 <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-       <!-- 1 YEAR SALES CALCULATOR -->  
-        <!-- JS CALCULATES YEARLY SALES AND PLACES VALUE -->
-                <script>
-               $(document).ready(function() {
-                   function fetchDailySales() {
-               
-                       var today = new Date().toISOString().slice(0, 10);
-                       
-                       $.ajax({
-                           url: 'admin_yearly_sales.php',
-                           method: 'POST',
-                           data: { date: today },
-                           success: function(response) {
-                               $('#yearly_sales').text(response);
-                           },
-                           error: function(xhr, status, error) {
-                               console.error(error);
-                           }
-                       });
-                   }
-                   fetchDailySales();
-               });
-               </script>                
-                    <div class="col-sm-6 col-xl-3">
-                        <div id="CurrentTime" class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                        <i class="fa fa-chart-pie fa-3x text-primary aligh-self-end"></i>
-                            <div class="ms-3">
-                                <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">...</h5>
-                                <h6 class="mb-0">...</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="yearly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                 <!---->
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">...</h5>
-                                <h6 class="mb-0">...</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="monthly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                <!---->
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">...</h5>
-                                <h6 class="mb-0">...</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="weekly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                  <!---->
-               
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                            <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">...</h5>
-                                <h6 class="mb-0">...</h6>
-                                <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="daily_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                            </div>
-                        </div>
-                    </div>
-    <!-- NÄMÄ KAKS DIVIÄ TARTTEE-->
-                </div>
-            </div>
-    <!-- CALCULATORS END--> 
-
-
-
-
-     <!-- TÄSTÄ ALKAA LOMAKKEILLE DIVI -->
-     <!--  PRINT LABLE  -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                      <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h5 class="mb-4">BOX1</h5>                        
-     <!-- PRINT FUNCTION FORM -->
-                <form>
-                        <div class="row mb-3">
-                            <label for="CUSTOMER" class="col-sm-2 col-form-label">...:</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="CUSTOMER" class="form-control" name="CUSTOMER" required>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="ADDRESS" class="col-sm-2 col-form-label">...:</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="ADDRESS" class="form-control" name="ADDRESS" required>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="CITY" class="col-sm-2 col-form-label">...:</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="CITY" class="form-control" name="CITY" required>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="ORDERID" class="col-sm-2 col-form-label">...</label>
-                            <div class="col-sm-10">
-                                <input type="tel" id="ORDERID" class="form-control" name="ORDERID" required>
-                            </div>
-                        </div>
-
-
-                <fieldset class="row mb-3">
-                <legend class="col-form-label col-sm-2 pt-0">OPTION:</legend>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">A6</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" disabled>
-                        <label class="form-check-label" for="gridRadios2">A5 (for future development)</label>
-                    </div>  
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                        <label class="form-check-label" for="gridRadios3">A4 (for future development)</label>
-                    </div>  
-                </div>
-            </fieldset>
-            <button onclick="savePDF()" class="btn btn-primary">!</button>
-        </form>
-    </div>
-</div>
-
-       <!-- KARTTA --> 
-                     <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                        <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25436.62206266915!2d24.648186330590794!3d60.20548786406383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920ff228d1c5bf%3A0xe08d6ee3d58690bb!2sEspoo%2C%20Finland!5e0!3m2!1sen!2sbd!4v1649091188370!5m2!1sen!2sbd"
-            frameborder="0" allowfullscreen="" aria-hidden="false"
-            tabindex="0" style="filter: grayscale(100%) invert(92%) contrast(83%); border: 0;"></iframe>
-                        </div>
-                    </div>
-
-                  <!-- JS FOR SEARCH FEATURE --> 
-                    <script>
-                    $(document).ready(function(){
-                        $('#searchInput').on('input', function(){
-                            var searchText = $(this).val().toLowerCase();
-                            $('#orderTable tbody tr').each(function(){
-                                var found = false;
-                                $(this).find('td').each(function(){
-                                    if($(this).text().toLowerCase().includes(searchText)){
-                                        found = true;
-                                        return false;
-                                    }
-                                });
-                                if(found){
-                                    $(this).show();
-                                } else {
-                                    $(this).hide();
-                                }
-                            });
-                        });
-                    });
-                </script>
-                    
-                    <!-- SEARCH FEATURE -->            
-                     <div class="container-fluid pt-4 px-4">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="col-sm-12 col-md-6 col-xl-4">
-                                    <div class="h-100 bg-secondary rounded p-4">
-                                        <div class="d-flex align-items-center justify-content-between mb-2">
-                                            <h5 class="mb-0">SEARCH (3 table data):</h5>
-                                        </div>
-                                        <input type="text" id="searchInput" class="form-control" placeholder="Enter search term">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ORDERS TABLE -->
-            <div class="container-fluid pt-4 px-4">
-             <div class="bg-secondary text-center rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h5 class="mb-0">TABLE1:</h5>
-                </div>
-                        <div id="orderTable" class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                          <thead>
-                                <tr style="color: #56d1ff;">
-                                    <th scope="col">ROW:</th>
-                                    <th scope="col">ROW:</th>
-                                    <th scope="col">ROW:</th>
-                                    <th scope="col">ROW:</th>
-                                    <th scope="col">ROW:</th>
-                                </tr>
-                            </thead>
-                            <tbody style="font-weight: bold; color: #ffed84;">
-
-                            </tbody>
-                           </table>
-                    </div>
-                </div>
-            </div>
-
-
-             <!-- LAATIKKO 3 MESSAGES -->
-
-             <div class="container-fluid pt-4 px-4">
-              <div class="bg-secondary text-center rounded p-4">
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h5 class="mb-0">TABLE2:</h5>
-               </div>
-                    <div id="orderTable" class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                          <thead>
-                            <tr style="color: #56d1ff;">
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                            </tr>
-                         </thead>
-                            <tbody style="font-weight: bold; color: #ffed84;">
-                         
-                            </tbody>
-                        </table>
+                  <div class="row g-4">
+                <!--  -->                 
+                       <!-- -->
+                       <div class="container-fluid pt-12 px-12">
+                           <div class="row g-4">
+                               <div class="col-12">
+                                   <div class="col-sm-12 col-md-12 col-xl-12">
+                                       <div class="h-100 bg-secondary rounded p-4">
+                                           <div class="d-flex align-items-center justify-content-between mb-2">
+                                               <img src="./img/software_map.png">
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                      
+                       <!-- -->
                    </div>
-             </div>
-            </div>
-
- <!-- LAATIKKO 4 ITEMS -->
-             <div class="container-fluid pt-4 px-4">
-              <div class="bg-secondary text-center rounded p-4">
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h5 class="mb-0">TABLE3:</h5>
                </div>
-                    <div id="orderTable" class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                          <thead>
-                            <tr style="color: #56d1ff;">
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                            </tr>
-                         </thead>
-                            <tbody style="font-weight: bold; color: #ffed84;">
-                            
-                            </tbody>
-                        </table>
-                   </div>
-             </div>
-            </div>
+
 
             <!-- FOOTER -->
             <div class="container-fluid pt-4 px-4">

@@ -184,7 +184,121 @@ a:hover span {
          <div class="container-fluid pt-4 px-4">
             <div class="row g-4">
     <!-- YLEMMÄT KAKSI DIVIÄ SITOVAT SIVUN KAIKKI LAATIKOT/TAULUT -->
+    <!-- JS FOR SEARCH FEATURE --> 
+    <script>
+        $(document).ready(function(){
+            $('#searchInput').on('input', function(){
+                var searchText = $(this).val().toLowerCase();
+                $('#orderTable tbody tr').each(function(){
+                    var found = false;
+                    $(this).find('td').each(function(){
+                        if($(this).text().toLowerCase().includes(searchText)){
+                            found = true;
+                            return false;
+                        }
+                    });
+                    if(found){
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+        
+        <!-- SEARCH FEATURE -->            
+         <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-secondary rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="mb-0">SEARCH (3 table data):</h5>
+                            </div>
+                            <input type="text" id="searchInput" class="form-control" placeholder="Enter search term">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- ORDERS TABLE -->
+<div class="container-fluid pt-4 px-4">
+ <div class="bg-secondary text-center rounded p-4">
+  <div class="d-flex align-items-center justify-content-between mb-4">
+        <h5 class="mb-0">TABLE1:</h5>
+    </div>
+            <div id="orderTable" class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+              <thead>
+                    <tr style="color: #56d1ff;">
+                        <th scope="col">ROW:</th>
+                        <th scope="col">ROW:</th>
+                        <th scope="col">ROW:</th>
+                        <th scope="col">ROW:</th>
+                        <th scope="col">ROW:</th>
+                    </tr>
+                </thead>
+                <tbody style="font-weight: bold; color: #ffed84;">
+
+                </tbody>
+               </table>
+        </div>
+    </div>
+</div>
+
+
+ <!-- LAATIKKO 3 MESSAGES -->
+
+ <div class="container-fluid pt-4 px-4">
+  <div class="bg-secondary text-center rounded p-4">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <h5 class="mb-0">TABLE2:</h5>
+   </div>
+        <div id="orderTable" class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+              <thead>
+                <tr style="color: #56d1ff;">
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                </tr>
+             </thead>
+                <tbody style="font-weight: bold; color: #ffed84;">
+             
+                </tbody>
+            </table>
+       </div>
+ </div>
+</div>
+
+<!-- LAATIKKO 4 ITEMS -->
+ <div class="container-fluid pt-4 px-4">
+  <div class="bg-secondary text-center rounded p-4">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <h5 class="mb-0">TABLE3:</h5>
+   </div>
+        <div id="orderTable" class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+              <thead>
+                <tr style="color: #56d1ff;">
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                    <th scope="col">ROW:</th>
+                </tr>
+             </thead>
+                <tbody style="font-weight: bold; color: #ffed84;">
+                
+                </tbody>
+            </table>
+       </div>
+ </div>
+</div>
     <!-- LAATIKKO 2 -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
