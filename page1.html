@@ -174,16 +174,17 @@ a:hover span {
                                 <h6 class="mb-0">LOG IN</h6>
                                 <h6 class="mb-0">LOGIN PROCESS</h6>
                                 <h6 class="mb-0">SESSION</h6>
-                                <h6 class="mb-0">ADMIN PAGE</h6>
-                                <P>LOGIN_PROCESS.PHP -> file athenticates users from database in real time and creates a ssession which will also be checked by the next page.
-                                    Session makes sure users cant go around login process or trying to enter a domanin name or the restricted page (which would work because session mismatch).
-                                    Login_process.php also has a an axception for admin so that if username nad password watch the admin he would be redirected to admin page,  
+                                <h6 class="mb-0">ADMIN WEBSITE</h6>
+                                <h6 class="mb-0">LINKED DB</h6>
+                                <P> Users trying to log in are athenticated directly from database "in real time". Session starts before redirection and checked by the next page too.
+                                    Session makes sure that no one could go around the login process or would be able to enter restricted webpages by writing its domanin name directly.
+                                    Login_process.php also has a an axception for redirecting admin to a different website.   
+                                    Linked DB stores passwords in seperate (hidden) DB so that even admin cant see them as there is no need for it.
                                 </P>
-                                <h6 class="mb-0">LINKED DATAPASES</h6>
-                                <h6 class="mb-0">PASSWORD INTEGRIY</h6>
-                                Even admin cant see users passwords thorugh admin website as there is no need for this,
-                                With linked databases users passwords are stored in seperate (hidden) DB for security purpouse.
-                                Admin tool for deleting users is also coded correctly to affect both DB's if eeds to be used.  
+                                
+                                <
+                                
+                               
                                    <br>   
                                  <div style="color: #56d1ff;"></div>
                               </div>
@@ -196,17 +197,19 @@ a:hover span {
                                  </div>
                                   <p>This drawio is a software architecture map (version 1) I made for SRS document during schools "final" teamproject.
                                      It explains functionality, structure and shows the route which data has to travel before it ends up on printed lable.
-                                     Project lasted 4 months. 
-                                     
-                                     Assingmenet was to make a functioning software to be used on customer office PC. Main requirement the automatization of printing lables with correct information.</p>
-                                     We were not allowed to connect printer to server or use any type of cloud services. Any "free to use" tools were considered ok.
-                                    
-                                     <p></p>
-                                    <p> Functionality of our solution is based on ->  "triggering" adminpage to request a server to open a PDF file.
-                                        PHP file retrieves the right data directly from the database and packs it into the PDF file with correct structure.
-                                     When PDF wants to open -> it will "force" the operating system default programme to open up and read it.
-                                     At this point user interraction is requird in order to finish the process.
-                                     When user confirms -> programm sends an order through operating system ordering printer to print the data brought by PDF.
+                                      
+                                     Our assingmenet was to "engineer" a functioning software that customer could§ use on his office computer.
+                                     Most importnat requirement was that "lableprinter" would print lables with correct data automatically.</p>
+                                     We were not allowed to connect printer to any server or cloud services.
+                                    <p> 
+                                        The solution we came up with inclouded using the Server, database, PHP, API and many front end programming languages.
+                                        The key was in adminpage beign able to send a request to server to receive an order to open PDF file.
+
+                                        So when users registered on the website and made their orders -> the data that was stored inside the servers database was fetched 
+                                        by php file and packed inside the PDF. 
+                                        When adminpage ties to open the PDF -> it will "force" the operating system default programme to open up and read it.
+                                        At this point only user interraction is requir to finish the process.
+                                        After user confirms -> programm sends an order to printer through operating system and printer does the rest.
 
                                     </p>               
                                   <div class="d-flex mb-2">
