@@ -171,7 +171,7 @@ a:hover span {
                                 <br>
                                 <P> 
                                     Below is the list of tasks & features created/coded by me.
-                                    I decided to challenge myself on this project.
+                                    I tried to challenge myself on this project.
                                 </P>  
                                 <h6>PROJECT PLAN (document)</h6>
                                 <h6>SRS (document)</h6>
@@ -206,18 +206,20 @@ a:hover span {
                                      Our assingmenet was to "engineer" a functioning software to be used on customer office PC.
                                      Most important requirement was to make lable-printer -> automatically print lables with carrect orderdatails.
                                      (We were not allowed to connect printer to any server or cloud services).<p> 
-                                        <p>
-                                        The solution we came up with inclouded using the server, database, PHP and various frontend programming languages. </p>
+                            
                                         <h6>SOLUTION:</h6>
                                         <p>
+                                        The solution we came up with inclouded using the server, database, PHP and various frontend programming languages.
+                                        <br>
                                         When users register on the website and make their orders -> data is stored in database on the server.
-                                        Using server programming language "PHP" data is retrieved to adminpage and packed (with correct structure) inside a PDF file. 
+                                        Data is retrieved to adminpage (by using server programming language PHP) and packed with correct structure inside a PDF file. 
                                         Then adminpage sends a request to server to receive an order to open PDF file.
-                                        When adminpage "tries" to open PDF -> it will automatically "trigger" default programme on the operating system to open and read the file.
-                                        At this point admin(user) has to confirm action by clickling on "print" button (user nterraction is required to finish the process).
-                                        After admin(user) confirms -> programme will send an order to printer via operating system to print the data inside PDF file. </p> 
+                                        When adminpage "tries" to open PDF -> it will automatically "trigger" default PDF-viewer (or default API of the operating system) to open and read the file.
+                                        At this point admin(user) has to confirm action by clickling on "print" button (user interraction is required to finish the process).
+                                        After admin(user) confirmation request is send to printer (via operating system) to print the data inside of PDF file. </p> 
 
-                                        <p>Drawio below is a software architecture map (version 1) I made to visualize the software. 
+                                        <h6>DRAWIO:</h6>
+                                        <p>Drawio below is a software architecture map (version 2) I made to visualize the software. 
                                             It explains functionality, structure and shows the route which data has to travel before it ends up being printed.</p>              
                                   <div class="d-flex mb-2">
                                 </div>
