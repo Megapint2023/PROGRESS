@@ -173,400 +173,172 @@ a:hover span {
              <!-- WEATHER END -->
 
 
-              <!-- USER OIKEALLA-->
-               <div class="nav-item dropdown">
+               <!-- USER OIKEALLA-->
+                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/TPP.jpg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex" style="color: RED; font-weight: bold;">"ADMIN"</span>
                         </a>
-                         
-               </div>
-             </nav>
-
-             <!-- -->
-         <div class="container-fluid pt-4 px-4">
-            <div class="row g-4">
-    <!-- YLEMMÄT KAKSI DIVIÄ SITOVAT SIVUN KAIKKI LAATIKOT/TAULUT -->
-    <!-- JS FOR SEARCH FEATURE --> 
-    <script>
-        $(document).ready(function(){
-            $('#searchInput').on('input', function(){
-                var searchText = $(this).val().toLowerCase();
-                $('#orderTable tbody tr').each(function(){
-                    var found = false;
-                    $(this).find('td').each(function(){
-                        if($(this).text().toLowerCase().includes(searchText)){
-                            found = true;
-                            return false;
-                        }
-                    });
-                    if(found){
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            });
-        });
-    </script>
-        
-        <!-- SEARCH FEATURE -->            
-         <div class="container-fluid pt-4 px-4">
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h5 class="mb-0">SEARCH (3 table data):</h5>
-                            </div>
-                            <input type="text" id="searchInput" class="form-control" placeholder="Enter search term">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ORDERS TABLE -->
-<div class="container-fluid pt-4 px-4">
- <div class="bg-secondary text-center rounded p-4">
-  <div class="d-flex align-items-center justify-content-between mb-4">
-        <h5 class="mb-0">TABLE1:</h5>
-    </div>
-            <div id="orderTable" class="table-responsive">
-            <table class="table text-start align-middle table-bordered table-hover mb-0">
-              <thead>
-                    <tr style="color: #56d1ff;">
-                        <th scope="col">ROW:</th>
-                        <th scope="col">ROW:</th>
-                        <th scope="col">ROW:</th>
-                        <th scope="col">ROW:</th>
-                        <th scope="col">ROW:</th>
-                    </tr>
-                </thead>
-                <tbody style="font-weight: bold; color: #ffed84;">
-
-                </tbody>
-               </table>
-        </div>
-    </div>
-</div>
+                     </div>
+                 </nav>
 
 
- <!-- LAATIKKO 3 MESSAGES -->
+                 <div class="container-fluid pt-4 px-4">
+                    <div class="row g-4">
+                           <!--  -->
+                            <div class="col-sm-12 col-md-6 col-xl-4">
+                              <div class="h-100 bg-secondary rounded p-4">
+                                <h5 class="mb-0" style="color: red;">KEY FEATURES:</h5>
+                                <br>
+                                <P>
+                                    ...
+                                </P>
+                                <h6>...</h6>
+                                <h6>...</h6>
+                                <h6>...</h6>
+                                <br>
+                                 <div style="color: #56d1ff;"></div>
+                              </div>
+                           </div>
+                          <!-- -->
+                            <div class="col-sm-12 col-md-6 col-xl-8">
+                              <div class="h-100 bg-secondary rounded p-4">
+                                 <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h5 class="mb-0" style="color: red;">"PROJECT NAME": </h5>
+                                 </div>
+                                 <h6>DESCRIPTION:</h6>
 
- <div class="container-fluid pt-4 px-4">
-  <div class="bg-secondary text-center rounded p-4">
-    <div class="d-flex align-items-center justify-content-between mb-4">
-        <h5 class="mb-0">TABLE2:</h5>
-   </div>
-        <div id="orderTable" class="table-responsive">
-            <table class="table text-start align-middle table-bordered table-hover mb-0">
-              <thead>
-                <tr style="color: #56d1ff;">
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                </tr>
-             </thead>
-                <tbody style="font-weight: bold; color: #ffed84;">
-             
-                </tbody>
-            </table>
-       </div>
- </div>
-</div>
+                                   <p>
+                                     ...
+                                  <p>
 
-<!-- LAATIKKO 4 ITEMS -->
- <div class="container-fluid pt-4 px-4">
-  <div class="bg-secondary text-center rounded p-4">
-    <div class="d-flex align-items-center justify-content-between mb-4">
-        <h5 class="mb-0">TABLE3:</h5>
-   </div>
-        <div id="orderTable" class="table-responsive">
-            <table class="table text-start align-middle table-bordered table-hover mb-0">
-              <thead>
-                <tr style="color: #56d1ff;">
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                    <th scope="col">ROW:</th>
-                </tr>
-             </thead>
-                <tbody style="font-weight: bold; color: #ffed84;">
-                
-                </tbody>
-            </table>
-       </div>
- </div>
-</div>
-    <!-- LAATIKKO 2 -->
-    <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-            <div class="col-12">
-                <div class="col-sm-12 col-md-6 col-xl-4">
-                    <div class="h-100 bg-secondary rounded p-4">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <h5 class="mb-0">BOX 1 FREE TO USE</h5>
-                        </div>
-                        <div id="weather-info"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- LAATIKKO 2 END -->
-
-     <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-            <div class="col-12">
-                <div class="col-sm-12 col-md-6 col-xl-4">
-                    <div class="h-100 bg-secondary rounded p-4">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <h5 class="mb-0">BOX 2 FREE TO USE:</h5>
-                        </div>
-                        <div id="weather-forecast"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- PRODUCT VALUES  -->
-<div class="container-fluid pt-4 px-4">
-            
-            <!-- SEARCH FEATURE -->            
-             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="col-sm-12 col-md-6 col-xl-4">
-                            <div class="h-100 bg-secondary rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="mb-0">SEARCH:</h5>
+                                        <h6>SOLUTION:</h6>
+                                        <p>
+                                        ...
+                                            <br>
+                                            <br>
+                                            ...
+                                            <br>
+                                        </p>
+                                        <h6>DRAWIO:</h6>
+                                        <p>...
+                                        </p>
+                                  <div class="d-flex mb-2">
                                 </div>
-                                <input type="text" id="searchInput" class="form-control" placeholder="...">
+                              </div>
+                           </div>
+
+                <!--SOFTWARE MAP-->
+                 <div class="container-fluid pt-4 px-4">
+                    <div class="row g-4">
+                        <div class="container-fluid pt-12 px-12">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="col-sm-12 col-md-12 col-xl-12" style="display: flex; justify-content: center; align-items: center;">
+                                        <div class="h-100 bg-secondary rounded p-4" style="position: relative; overflow: hidden; max-width: 100%; width: auto;">
+                                            <div class="d-flex align-items-center justify-content-center" style="position: relative;">
+                                                <img src="./img/tpp.jpg" style="max-width: 100%; height: auto; display: block;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-    <!-- TABLE FOR REGISTERED USERS -->
-    <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-            <div class="col-12">
-                <div class="bg-secondary rounded h-100 p-5">
-                    <h5 class="mb-4">table:</h5>
-                    <div id="usersTable" class="table-responsive">
-                    <table class="table table-dark">
-                        <thead>
-                            <tr style="font-weight: bold; color: #56d1ff;">
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                                <th scope="col">ROW:</th>
-                            </tr>
-                        </thead>
-                        <tbody style="font-weight: bold; color: #ffed84;">
-        
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-    <!-- TABLE FOR REGISTERED USERS END -->
-            
-      <!-- 4X CALCULATORS -->
-      <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-          <!-- -->
+                          <!-- -->
+                            <div class="col-sm-12 col-md-6 col-xl-8">
+                              <div class="h-100 bg-secondary rounded p-4">
+                                 <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h5 class="mb-0" style="color: red;">*** </h5>
+                                 </div>
+                                <p>
+                                    ...
+                                </p>
+                                  <div class="d-flex mb-2">
 
-            <div class="col-sm-6 col-xl-3">
-                <div id="CurrentTime" class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-pie fa-3x text-primary aligh-self-end"></i>
-                    <div class="ms-3">
-                        <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
-                        <h6 class="mb-0">...</h6>
-                        <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="yearly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                    </div>
-                </div>
-            </div>
-        <!-- -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-line fa-3x text-primary"></i>
-                    <div class="ms-3">
-                    <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
-                        <h6 class="mb-0">...</h6>
-                        <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="monthly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                    </div>
-                </div>
-            </div>
-        <!-- -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                    <div class="ms-3">
-                    <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
-                        <h6 class="mb-0">...</h6>
-                        <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="weekly_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                    </div>
-                </div>
-            </div>
-         <!-- -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-area fa-3x text-primary"></i>
-                    <div class="ms-3">
-                    <h5 class="mb-2" style="font-weight: bold; color: #56d1ff;">***</h5>
-                        <h6 class="mb-0">...</h6>
-                        <h5 class="mb-0" style="font-weight: bold; color: #2fbe00;"><span id="daily_sales" style="text-shadow: 0 0 5px #2fbe00;">o</span></h5>
-                    </div>
-                </div>
-            </div>
-            <!-- -->
+                                </div>
+                              </div>
+                           </div>
 
-
-
-         <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded h-100 p-4">
-
-                <h5 class="mb-4">BOX1</h5>
-                <form action="admin_add_user.html" method="post">
-
-                <div class="row mb-3">
-                        <label for="name" class="col-sm-2 col-form-label">*</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" name="name" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="dddress" class="col-sm-2 col-form-label">*</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" name="address" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="phone" class="col-sm-2 col-form-label">*</label>
-                        <div class="col-sm-10">
-                        <input type="tel" class="form-control" name="phone" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="emai" class="col-sm-2 col-form-label">*</label>
-                        <div class="col-sm-10">
-                        <input type="email" class="form-control" name="email" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="password" class="col-sm-2 col-form-label">*</label>
-                        <div class="col-sm-10">
-                        <input type="password" class="form-control" name="password" required>
-                        </div>
-                    </div>
-
-                    <fieldset class="row mb-3">
-                        
-                        <div class="col-sm-10">
-                            <div class="form-check">
-                                
-                               
-                            </div>
-                            <div class="form-check">
-                         
-                         
+                    <!--DB-->
+                    <div class="container-fluid pt-4 px-4">
+                        <div class="row g-4">
+                            <div class="container-fluid pt-12 px-12">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <div class="col-sm-12 col-md-12 col-xl-12" style="display: flex; justify-content: center; align-items: center;">
+                                            <div class="h-100 bg-secondary rounded p-4" style="position: relative; overflow: hidden; max-width: 100%; width: auto;">
+                                                <div class="d-flex align-items-center justify-content-center" style="position: relative;">
+                                                    <img src="./img/TPP.jpg" style="max-width: 100%; height: auto; display: block;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </fieldset>
-                    
-                    <button type="submit" class="btn btn-primary">...</button>
-                </form>
-            </div>
-        </div>
-        
-        <!-- YHTEYDENOTTO LOMAKE --> 
-              <div class="col-sm-12 col-xl-6">
-                    <div class="bg-secondary rounded h-100 p-4">
-                        <h5 class="mb-4">BOX2</h5>
-                        <p>You get it? "I build this place... Down here i make the rules... Down here... Im God.</p>
-        
-                        
-                            <div class="mb-3">
-                               
-                                <input type="email" class="form-control" id="customerEmail" name="customerEmail" aria-describedby="emailHelp" required>
-                            </div>
-        
-                            <div class="mb-3">
-                            <label for="message" class="form-label">MESSAGE:</label>
-                            <textarea class="form-control" id="message" name="message" placeholder="(...)" style="height: 150px;" required></textarea>
-                         </div>
-                            <button type="submit" class="btn btn-primary" id="disabled">B</button>
-                    
                     </div>
-                </div>   
-        <!-- JS FOR BUTTON "DISABLED" ALERT  -->   
-        <script>
-          document.getElementById("disabled").addEventListener("click", function() {
-              alert("NEW FEATURE");
-          });
-        </script>
-           <!-- -->
 
-           <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">CODE:</h6>
-                <canvas id="salse-revenue"></canvas>
-            </div>
-        </div>
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">CODE:</h6>
-                <canvas id="worldwide-sales"></canvas>
-            </div>
-        </div>
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">CODE:</h6>
-                <canvas id="bar-chart"></canvas>
-            </div>
-        </div>
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">CODE:</h6>
-                <canvas id="line-chart"></canvas>
-            </div>
-        </div>
+                <!-- -->
+                <div class="col-sm-12 col-md-6 col-xl-8">
+                  <div class="h-100 bg-secondary rounded p-4">
+                     <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h5 class="mb-0" style="color: red;">***</h5>
+                     </div>
+                     <p>
+                        ...
+                    </p>
+                    <p>
+                        ...
+                    </p>
+                    <p>
+                     ...
+                    </p>
+                      <div class="d-flex mb-2">
 
-         
-           <!-- FOOTER -->
+                    </div>
+                  </div>
+               </div>
+                <!--ADMIN FEATURES 1 -->
+                <div class="container-fluid pt-4 px-4">
+                    <div class="row g-4">
+                        <div class="container-fluid pt-12 px-12">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="col-sm-12 col-md-12 col-xl-12" style="display: flex; justify-content: center; align-items: center;">
+                                        <div class="h-100 bg-secondary rounded p-4" style="position: relative; overflow: hidden; max-width: 100%; width: auto;">
+                                            <div class="d-flex align-items-center justify-content-center" style="position: relative;">
+                                                <img src="./img/tpp.jpg" style="max-width: 100%; height: auto; display: block;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- FOOTER -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Megapint2023</a>, All Rights Reserved. 
+                            &copy; <a href="#">Megapint2023</a>, All Rights Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            <!--/*** LICENSE: This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                             <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- FOOTER END-->
 
+            <!-- FOOTER END -->
         </div>
-        <!-- CONTENT END-->
+        <!-- Content End -->
 
 
         <!-- Back to Top -->
